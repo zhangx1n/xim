@@ -19,3 +19,9 @@
 
 # Go workspace file
 go.work
+
+# 测试不熟悉库和函数的用法.
+./demo
+
+./chat.log
+./plato
