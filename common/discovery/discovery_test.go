@@ -7,9 +7,8 @@ import (
 )
 
 func TestServiceDiscovery(t *testing.T) {
-	var endpoints = []string{"localhost:12379"}
 	ctx := context.Background()
-	ser := NewServiceDiscovery(&ctx, endpoints)
+	ser := NewServiceDiscovery(&ctx)
 	defer ser.Close()
 
 	ser.WatchService("/web/", func(key, value string) {}, func(key, value string) {})

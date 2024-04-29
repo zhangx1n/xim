@@ -6,7 +6,6 @@ import (
 )
 
 func init() {
-
 	rootCmd.AddCommand(clientCmd)
 }
 

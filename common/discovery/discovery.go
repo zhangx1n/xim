@@ -3,10 +3,10 @@ package discovery
 import (
 	"context"
 	"sync"
-	"time"
 
 	"github.com/bytedance/gopkg/util/logger"
 	"github.com/coreos/etcd/mvcc/mvccpb"
+	"github.com/zhangx1n/plato/common/config"
 	"go.etcd.io/etcd/clientv3"
 )
 
@@ -18,10 +18,10 @@ type ServiceDiscovery struct {
 }
 
 // NewServiceDiscovery  新建发现服务
-func NewServiceDiscovery(ctx *context.Context, endpoints []string) *ServiceDiscovery {
+func NewServiceDiscovery(ctx *context.Context) *ServiceDiscovery {
 	cli, err := clientv3.New(clientv3.Config{
-		Endpoints:   endpoints,
-		DialTimeout: 5 * time.Second,
+		Endpoints:   config.GetEndpointsForDiscovery(),
+		DialTimeout: config.GetTimeoutForDiscovery(),
 	})
 	if err != nil {
 		logger.Fatal(err)
@@ -45,13 +45,13 @@ func (s *ServiceDiscovery) WatchService(prefix string, set, del func(key, value 
 		set(string(ev.Key), string(ev.Value))
 	}
 	// 监视前缀，修改变更的server
-	s.watcher(prefix, set, del)
+	s.watcher(prefix, resp.Header.Revision+1, set, del)
 	return nil
 }
 
 // watcher 监听前缀
-func (s *ServiceDiscovery) watcher(prefix string, set, del func(key, value string)) {
-	rch := s.cli.Watch(*s.ctx, prefix, clientv3.WithPrefix())
+func (s *ServiceDiscovery) watcher(prefix string, rev int64, set, del func(key, value string)) {
+	rch := s.cli.Watch(*s.ctx, prefix, clientv3.WithPrefix(), clientv3.WithRev(rev))
 	logger.CtxInfof(*s.ctx, "watching prefix:%s now...", prefix)
 	for wresp := range rch {
 		for _, ev := range wresp.Events {
