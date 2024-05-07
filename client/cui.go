@@ -7,7 +7,7 @@ import (
 
 	"github.com/gookit/color"
 	"github.com/rocket049/gocui"
-	"github.com/zhangx1n/plato/client/sdk"
+	"github.com/zhangx1n/plato/common/sdk"
 )
 
 func init() {
