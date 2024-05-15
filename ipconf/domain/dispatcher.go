@@ -1,6 +1,7 @@
 package domain
 
 import (
+	"github.com/zhangx1n/plato/ipconf/source"
 	"sort"
 	"sync"
 )
@@ -50,4 +51,27 @@ func (d *Dispatcher) getCandidateEndport(ctx *IpConfContext) []*Endport {
 		candidateList = append(candidateList, ed)
 	}
 	return candidateList
+}
+
+func (dp *Dispatcher) delNode(event *source.Event) {
+	dp.Lock()
+	defer dp.Unlock()
+	delete(dp.candidateTable, event.Key())
+}
+func (dp *Dispatcher) addNode(event *source.Event) {
+	dp.Lock()
+	defer dp.Unlock()
+	var (
+		ed *Endport
+		ok bool
+	)
+	if ed, ok = dp.candidateTable[event.Key()]; !ok { // 不存在
+		ed = NewEndport(event.IP, event.Port)
+		dp.candidateTable[event.Key()] = ed
+	}
+	ed.UpdateStat(&Stat{
+		ConnectNum:   event.ConnectNum,
+		MessageBytes: event.MessageBytes,
+	})
+
 }
