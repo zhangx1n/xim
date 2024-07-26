@@ -3,9 +3,9 @@ package plugin
 import (
 	"fmt"
 
-	"github.com/zhangx1n/plato/common/prpc/config"
-	"github.com/zhangx1n/plato/common/prpc/discov"
-	"github.com/zhangx1n/plato/common/prpc/discov/etcd"
+	"github.com/zhangx1n/xim/common/prpc/config"
+	"github.com/zhangx1n/xim/common/prpc/discov"
+	"github.com/zhangx1n/xim/common/prpc/discov/etcd"
 )
 
 // GetDiscovInstance 获取服务发现实例

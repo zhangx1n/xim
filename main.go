@@ -1,6 +1,6 @@
 package main
 
-import "github.com/zhangx1n/plato/cmd"
+import "github.com/zhangx1n/xim/cmd"
 
 func main() {
 	cmd.Execute()

@@ -1,7 +1,7 @@
 package domain
 
 import (
-	"github.com/zhangx1n/plato/ipconf/source"
+	"github.com/zhangx1n/xim/ipconf/source"
 	"sort"
 	"sync"
 )

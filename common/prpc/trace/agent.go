@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/bytedance/gopkg/util/logger"
-	"github.com/zhangx1n/plato/common/prpc/config"
+	"github.com/zhangx1n/xim/common/prpc/config"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/exporters/jaeger"
 	"go.opentelemetry.io/otel/propagation"

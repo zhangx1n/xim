@@ -6,7 +6,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/zhangx1n/plato/common/discovery"
+	"github.com/zhangx1n/xim/common/discovery"
 )
 
 func testServiceRegister(ctx *context.Context, port, node string) {
@@ -20,7 +20,7 @@ func testServiceRegister(ctx *context.Context, port, node string) {
 				"message_bytes": float64(rand.Int63n(1231232131556)),
 			},
 		}
-		sr, err := discovery.NewServiceRegister(ctx, fmt.Sprintf("/plato/ip_dispatcher/%s", node), &ed, time.Now().Unix())
+		sr, err := discovery.NewServiceRegister(ctx, fmt.Sprintf("/xim/ip_dispatcher/%s", node), &ed, time.Now().Unix())
 		if err != nil {
 			panic(err)
 		}

@@ -10,9 +10,9 @@ import (
 	"time"
 
 	"github.com/bytedance/gopkg/util/logger"
-	"github.com/zhangx1n/plato/common/prpc/discov"
-	"github.com/zhangx1n/plato/common/prpc/discov/plugin"
-	serverinterceptor "github.com/zhangx1n/plato/common/prpc/interceptor/server"
+	"github.com/zhangx1n/xim/common/prpc/discov"
+	"github.com/zhangx1n/xim/common/prpc/discov/plugin"
+	serverinterceptor "github.com/zhangx1n/xim/common/prpc/interceptor/server"
 	"google.golang.org/grpc"
 )
 

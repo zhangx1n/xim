@@ -1,4 +1,4 @@
-module github.com/zhangx1n/plato
+module github.com/zhangx1n/xim
 
 go 1.21
 

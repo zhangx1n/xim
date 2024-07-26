@@ -16,14 +16,14 @@ func init() {
 	rootCmd.PersistentFlags().StringVar(
 		&ConfigPath,
 		"config",
-		"./plato.yaml",
-		"config file (default is ./plato.yaml)")
+		"./xim.yaml",
+		"config file (default is ./xim.yaml)")
 }
 
 var rootCmd = &cobra.Command{
-	Use:   "plato",
+	Use:   "xim",
 	Short: "一个支持百万 QPS 的 IM 系统",
-	Run:   Plato,
+	Run:   xim,
 }
 
 func Execute() {
@@ -33,7 +33,7 @@ func Execute() {
 	}
 }
 
-func Plato(cmd *cobra.Command, args []string) {
+func xim(cmd *cobra.Command, args []string) {
 
 }
 

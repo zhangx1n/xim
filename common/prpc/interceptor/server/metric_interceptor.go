@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/zhangx1n/plato/common/prpc/prome"
-	"github.com/zhangx1n/plato/common/prpc/util"
+	"github.com/zhangx1n/xim/common/prpc/prome"
+	"github.com/zhangx1n/xim/common/prpc/util"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/status"
 )

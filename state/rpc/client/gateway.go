@@ -3,9 +3,9 @@ package client
 import (
 	"context"
 	"fmt"
-	"github.com/zhangx1n/plato/common/config"
-	"github.com/zhangx1n/plato/common/prpc"
-	"github.com/zhangx1n/plato/gateway/rpc/service"
+	"github.com/zhangx1n/xim/common/config"
+	"github.com/zhangx1n/xim/common/prpc"
+	"github.com/zhangx1n/xim/gateway/rpc/service"
 	"time"
 )
 

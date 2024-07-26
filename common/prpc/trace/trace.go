@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	TraceName = "plato-trace"
+	TraceName = "xim-trace"
 )
 
 type metadataSupplier struct {

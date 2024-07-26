@@ -6,7 +6,7 @@ import (
 
 	"github.com/bytedance/gopkg/util/logger"
 	"github.com/juju/ratelimit"
-	pcode "github.com/zhangx1n/plato/common/prpc/code"
+	pcode "github.com/zhangx1n/xim/common/prpc/code"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/status"
 )

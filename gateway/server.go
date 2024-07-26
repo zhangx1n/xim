@@ -4,16 +4,16 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/zhangx1n/plato/common/prpc"
-	"github.com/zhangx1n/plato/common/tcp"
-	"github.com/zhangx1n/plato/gateway/rpc/client"
-	"github.com/zhangx1n/plato/gateway/rpc/service"
+	"github.com/zhangx1n/xim/common/prpc"
+	"github.com/zhangx1n/xim/common/tcp"
+	"github.com/zhangx1n/xim/gateway/rpc/client"
+	"github.com/zhangx1n/xim/gateway/rpc/service"
 	"google.golang.org/grpc"
 	"io"
 	"log"
 	"net"
 
-	"github.com/zhangx1n/plato/common/config"
+	"github.com/zhangx1n/xim/common/config"
 )
 
 var cmdChannel chan *service.CmdContext

@@ -6,7 +6,7 @@ import (
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/common/utils"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
-	"github.com/zhangx1n/plato/ipconf/domain"
+	"github.com/zhangx1n/xim/ipconf/domain"
 )
 
 type Response struct {

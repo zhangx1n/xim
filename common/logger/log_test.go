@@ -2,8 +2,8 @@ package logger
 
 import (
 	"context"
-	"github.com/zhangx1n/plato/common/config"
-	ptrace "github.com/zhangx1n/plato/common/prpc/trace"
+	"github.com/zhangx1n/xim/common/config"
+	ptrace "github.com/zhangx1n/xim/common/prpc/trace"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/trace"
 	"testing"
@@ -11,7 +11,7 @@ import (
 )
 
 func TestLogger(t *testing.T) {
-	config.Init("../../plato.yaml")
+	config.Init("../../xim.yaml")
 	NewLogger(WithLogDir("/Users/www/logs"))
 	InfoCtx(context.Background(), "info test")
 	DebugCtx(context.Background(), "debug test")
@@ -21,7 +21,7 @@ func TestLogger(t *testing.T) {
 }
 
 func TestTraceLog(t *testing.T) {
-	config.Init("../../plato.yaml")
+	config.Init("../../xim.yaml")
 	NewLogger(WithLogDir("/Users/www/logs"))
 	ptrace.StartAgent()
 	defer ptrace.StopAgent()

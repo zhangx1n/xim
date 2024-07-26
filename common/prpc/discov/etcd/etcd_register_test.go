@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/zhangx1n/plato/common/prpc/discov"
+	"github.com/zhangx1n/xim/common/prpc/discov"
 )
 
 func TestNewETCDRegister(t *testing.T) {

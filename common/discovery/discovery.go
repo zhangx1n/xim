@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/bytedance/gopkg/util/logger"
-	"github.com/zhangx1n/plato/common/config"
+	"github.com/zhangx1n/xim/common/config"
 	"go.etcd.io/etcd/api/v3/mvccpb"
 	clientv3 "go.etcd.io/etcd/client/v3"
 )

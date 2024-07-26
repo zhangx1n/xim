@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/bytedance/gopkg/util/logger"
-	"github.com/zhangx1n/plato/common/config"
-	"github.com/zhangx1n/plato/common/discovery"
+	"github.com/zhangx1n/xim/common/config"
+	"github.com/zhangx1n/xim/common/discovery"
 )
 
 func Init() {

@@ -5,10 +5,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/zhangx1n/plato/common/config"
-	"github.com/zhangx1n/plato/common/prpc"
-	"github.com/zhangx1n/plato/common/prpc/example/helloservice"
-	ptrace "github.com/zhangx1n/plato/common/prpc/trace"
+	"github.com/zhangx1n/xim/common/config"
+	"github.com/zhangx1n/xim/common/prpc"
+	"github.com/zhangx1n/xim/common/prpc/example/helloservice"
+	ptrace "github.com/zhangx1n/xim/common/prpc/trace"
 	"google.golang.org/grpc"
 )
 

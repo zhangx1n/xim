@@ -3,7 +3,7 @@ package source
 import (
 	"fmt"
 
-	"github.com/zhangx1n/plato/common/discovery"
+	"github.com/zhangx1n/xim/common/discovery"
 )
 
 var eventChan chan *Event

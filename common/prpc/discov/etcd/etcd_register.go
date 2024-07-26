@@ -11,11 +11,11 @@ import (
 	"time"
 
 	"github.com/bytedance/gopkg/util/logger"
-	"github.com/zhangx1n/plato/common/prpc/discov"
+	"github.com/zhangx1n/xim/common/prpc/discov"
 	clientv3 "go.etcd.io/etcd/client/v3"
 )
 
-const KeyPrefix = "/plato/prpc/"
+const KeyPrefix = "/xim/prpc/"
 
 // Register ...
 type Register struct {

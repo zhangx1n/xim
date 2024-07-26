@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/zhangx1n/plato/state"
+	"github.com/zhangx1n/xim/state"
 )
 
 func init() {

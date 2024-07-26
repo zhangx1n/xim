@@ -1,0 +1,34 @@
+{
+  "name": "Go Development Environment",
+  "dockerComposeFile": "compose-dev.yaml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  // 配置 VS Code 设置
+  "settings": {
+    "go.toolsManagement.checkForUpdates": "local",
+    "go.useLanguageServer": true,
+    "go.gopath": "/go"
+  },
+  // 添加要安装的扩展
+  "extensions": [
+    "golang.go",
+    "ms-vscode.go",
+    "streetsidesoftware.code-spell-checker"
+  ],
+  // 使用 postCreateCommand 来设置环境
+  "postCreateCommand": "go version && go install golang.org/x/tools/gopls@latest",
+  // 设置环境变量
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:/go/bin"
+  },
+  // 添加额外的特性
+  "features": {
+    "docker-in-docker": "latest",
+    "git": "latest",
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    },
+  },
+  // 可选：如果需要以非 root 用户运行
+  // "remoteUser": "vscode"
+}

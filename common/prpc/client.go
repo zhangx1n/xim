@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/zhangx1n/plato/common/prpc/discov/plugin"
+	"github.com/zhangx1n/xim/common/prpc/discov/plugin"
 
 	"google.golang.org/grpc/resolver"
 
-	"github.com/zhangx1n/plato/common/prpc/discov"
-	clientinterceptor "github.com/zhangx1n/plato/common/prpc/interceptor/client"
-	presolver "github.com/zhangx1n/plato/common/prpc/resolver"
+	"github.com/zhangx1n/xim/common/prpc/discov"
+	clientinterceptor "github.com/zhangx1n/xim/common/prpc/interceptor/client"
+	presolver "github.com/zhangx1n/xim/common/prpc/resolver"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/balancer/roundrobin"
 )

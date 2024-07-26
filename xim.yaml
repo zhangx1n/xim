@@ -5,7 +5,7 @@ discovery:
     - localhost:12379
   timeout: 5
 ip_conf:
-  service_path: /plato/ip_dispatcher
+  service_path: /xim/ip_dispatcher
 prpc:
   discov:
     name: etcd
@@ -14,10 +14,10 @@ prpc:
   trace:
     enable: true
     url: http://127.0.0.1:14268/api/traces
-    service_name: plato
+    service_name: xim
     sampler: 1.0
 gateway:
-  service_name: "plato.access.gateway"
+  service_name: "xim.access.gateway"
   service_addr: "127.0.0.1"
   tcp_max_num: 70000
   epoll_channel_num: 100
@@ -29,7 +29,7 @@ gateway:
   cmd_channel_num: 2048
   weight: 100
 state:
-  service_name: "plato.access.state"
+  service_name: "xim.access.state"
   servide_addr: "127.0.0.1"
   cmd_channel_num: 2048
   server_port: 8902

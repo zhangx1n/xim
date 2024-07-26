@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/zhangx1n/plato/common/config"
+	"github.com/zhangx1n/xim/common/config"
 )
 
 func TestMain(m *testing.M) {
-	config.Init("../../../plato.yaml")
+	config.Init("../../../xim.yaml")
 	m.Run()
 }
 

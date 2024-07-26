@@ -3,7 +3,7 @@ package server
 import (
 	"context"
 
-	ptrace "github.com/zhangx1n/plato/common/prpc/trace"
+	ptrace "github.com/zhangx1n/xim/common/prpc/trace"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"

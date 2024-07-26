@@ -2,7 +2,7 @@ package sdk
 
 import (
 	"encoding/json"
-	"github.com/zhangx1n/plato/common/tcp"
+	"github.com/zhangx1n/xim/common/tcp"
 	"net"
 )
 

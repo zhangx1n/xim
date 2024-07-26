@@ -1,6 +1,6 @@
 package ipconf
 
-import "github.com/zhangx1n/plato/ipconf/domain"
+import "github.com/zhangx1n/xim/ipconf/domain"
 
 func top5Endports(eds []*domain.Endport) []*domain.Endport {
 	if len(eds) < 5 {
